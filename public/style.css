@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+} /*reseta os estilos para a página inteira - tira as bordas */
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    color: #222;
+}/* cor do site */
+
+body {
+    width: 80%;
+    margin: 0 auto;
+}/* largura do site */
+
+.nav {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav h3 {
+    font-size: 1.4rem;
+}
+
+.navItens {
+    list-style-type: none;
+    display: flex;
+}
+
+.navItens li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5vw;
+}
+
+.navItens img {
+    max-width: 28px;
+    cursor: pointer;
+}
+
+.navItens a {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navItens a:hover {
+    background-color: #eee;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /*adapta o grid ao tamanho da tela*/
+    grid-gap: 0.5vw;
+    
+}
+
+.post {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    justify-self: center;
+}
+
+.postImage {
+    width: 350px;
+    height: 500px;
+}
+
+.postLink {
+    position: absolute;
+    background-color: white;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    visibility: 0;
+    opacity: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 50%;
+    transition: opacity .2s;
+}
+
+.post:hover .postLink { 
+    visibility: visible;
+    opacity: 0.5;
+}
+
+.profile {
+    display: none;
+    grid-template-columns: 1fr 2fr;
+}
+
+.profileImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.profilePic {
+    max-width: 20vw;
+    padding: 10px;
+}
+
+.profileText * {
+    padding: 10px;
+}
+
+@media (max-width: 500px) {
+    #menu {
+        display: none;
+    }
+
+    .profile {
+        display: grid;
+    }
+}
